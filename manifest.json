@@ -1,0 +1,9 @@
+{
+  "name": "Critter Keep",
+  "short_name": "Critters",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#14201a",
+  "theme_color": "#1d2b24",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

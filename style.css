@@ -1,0 +1,104 @@
+:root {
+  --bg: #14201a;
+  --panel: #1d2b24;
+  --panel2: #26382f;
+  --text: #e6efe9;
+  --muted: #9db3a6;
+  --accent: #7fd18b;
+  --warn: #f0b35a;
+  --bad: #ef6f6f;
+  --gold: #f3d36b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 640px;
+  min-height: 100vh;
+  padding: 0 12px 24px;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.45 ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
+}
+
+#topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--panel2);
+}
+#topbar b { color: var(--accent); }
+#topbar .gold { color: var(--gold); }
+
+h2 { font-size: 1.15em; margin: 14px 0 8px; color: var(--accent); }
+h3 { font-size: 1em; margin: 12px 0 6px; color: var(--muted); }
+p { margin: 6px 0; }
+.muted { color: var(--muted); }
+.warn { color: var(--warn); }
+.bad { color: var(--bad); }
+.good { color: var(--accent); }
+.gold { color: var(--gold); }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--panel2);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 8px 0;
+}
+
+.btns { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin: 10px 0; }
+.list { display: grid; gap: 6px; margin: 8px 0; }
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--panel2);
+  border: 1px solid #3a5446;
+  border-radius: 8px;
+  padding: 12px 10px;
+  min-height: 48px;
+  text-align: left;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: 0.4; cursor: default; }
+button.sel { border-color: var(--accent); background: #2f4a3b; }
+button.primary { border-color: var(--accent); }
+button.danger { border-color: var(--bad); }
+
+.bar { white-space: pre; }
+.hp-hi { color: var(--accent); }
+.hp-mid { color: var(--warn); }
+.hp-lo { color: var(--bad); }
+
+table { border-collapse: collapse; width: 100%; }
+td { padding: 2px 6px 2px 0; }
+
+textarea {
+  width: 100%;
+  min-height: 90px;
+  font: 12px ui-monospace, monospace;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--panel2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#log {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--panel2);
+  font-size: 14px;
+  color: var(--muted);
+}
+#log p { margin: 3px 0; }
+#log p:first-child { color: var(--text); }
