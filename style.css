@@ -33,7 +33,7 @@ body {
   background: var(--bg);
   border-bottom: 1px solid var(--panel2);
 }
-#topbar b { color: var(--accent); }
+#topbar b { color: var(--accent); white-space: nowrap; }
 #topbar .gold { color: var(--gold); }
 
 h2 { font-size: 1.15em; margin: 14px 0 8px; color: var(--accent); }
